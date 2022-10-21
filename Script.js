@@ -1,9 +1,18 @@
-// var dice = math.floor(math.random() * 6) + 1;
-var dice1 = Math.floor(Math.random() * 6) + 1;
-// var dice = math.random() * 6;
+var scores, roundScore, activePlayer, dice;
+scores = [0, 0];
+roundScore = 0;
+activePlayer = 1;
 
-document.querySelector(".btn-roll").addEventListener("click", function () {
-  diceDOM = document.querySelector(".dice");
-  diceDOM.style.display = "block";
-  diceDOM.src = "dice-" + dice1 + ".png";
-});
+dice = Math.floor(Math.random() * 6) + 1
+console.log(dice);
+
+// document.querySelector(".current-" + activePlayer).textContent = dice
+document.querySelector(".current-" + activePlayer).innerHTML = "<em>" + dice + "</em>"
+
+// var dice1 = Math.floor(Math.random() * 6) + 1;
+
+// document.querySelector(".btn-roll").addEventListener("click", function () {
+//   diceDOM = document.querySelector(".dice");
+//   diceDOM.style.display = "block";
+//   diceDOM.src = "dice-" + dice1 + ".png";
+// });
