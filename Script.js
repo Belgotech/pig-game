@@ -50,11 +50,16 @@ document.querySelector(".btn-hold").addEventListener("click", function() {
   //update the UI
   document.querySelector("#score-" + activePlayer).textContent = scores[activePlayer] 
   //check if player won
-  if(scores = 100){
-    
+  if(scores[activePlayer] >= 100){
+    document.querySelector("#name-" + activePlayer).textContent = "winner" 
+    document.querySelector(".dice").style.display = "none" 
+    document.querySelector(".player" + activePlayer + "-panel").textContent.classList.add("winner")
+    document.querySelector(".player" + activePlayer + "-panel").textContent.classList.remove("active")
+  }else{
+    //nextPlayer
+    nextPlayer()
   }
-  //nextPlayer
-  nextPlayer()
+  
 })
 
 
