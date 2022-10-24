@@ -73,6 +73,11 @@ function init() {
   document.getElementById("score-0").textContent = "0";
   document.getElementById("name-0").textContent = "player-1";
   document.getElementById("name-1").textContent = "player-2";
+  document.getElementById("player-0-panel").classList.remove("winner");
+  document.getElementById("player-1-panel").classList.remove("winner");
+  document.getElementById("player-0-panel").classList.remove("active");
+  document.getElementById("player-1-panel").classList.remove("active");
+  document.getElementById("player-0-panel").classList.add("active");
 }
 
 
