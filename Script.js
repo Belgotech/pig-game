@@ -1,5 +1,6 @@
 var scores, roundScore, activePlayer, dice;
 
+init()
 document.querySelector(".btn-roll").addEventListener("click", function () {
   // Random Number
   var dice = Math.floor(Math.random() * 6) + 1;
@@ -70,6 +71,8 @@ function init() {
   document.getElementById("current-0").textContent = "0";
   document.getElementById("current-1").textContent = "0";
   document.getElementById("score-0").textContent = "0";
+  document.getElementById("name-0").textContent = "player-1";
+  document.getElementById("name-1").textContent = "player-2";
 }
 
 
