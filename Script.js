@@ -52,9 +52,12 @@ document.querySelector(".btn-hold").addEventListener("click", function() {
   //check if player won
   if(scores[activePlayer] >= 100){
     document.querySelector("#name-" + activePlayer).textContent = "winner" 
-    document.querySelector(".dice").style.display = "none" 
-    document.querySelector(".player" + activePlayer + "-panel").textContent.classList.add("winner")
-    document.querySelector(".player" + activePlayer + "-panel").textContent.classList.remove("active")
+    // document.querySelector(".dice").style.display = "none" 
+    // document.querySelector(".player" + activePlayer + "-panel").classList.add("winner")
+    // document.querySelector(".player" + activePlayer + "-panel").classList.remove("active")
+    document.querySelector('.dice').style.display = 'none';
+    document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
+    document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
   }else{
     //nextPlayer
     nextPlayer()
