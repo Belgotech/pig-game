@@ -1,8 +1,10 @@
-var scores, roundScore, activePlayer, dice;
+var scores, roundScore, activePlayer, dice, gamePlaying;
 
 init()
 document.querySelector(".btn-roll").addEventListener("click", function () {
-  // Random Number
+
+  if (gamePlaying){
+    // Random Number
   var dice = Math.floor(Math.random() * 6) + 1;
 
   // Generating Result
@@ -18,6 +20,8 @@ document.querySelector(".btn-roll").addEventListener("click", function () {
   } else {
     nextPlayer();
   }
+  }
+  
 });
 
 function nextPlayer() {
@@ -64,6 +68,7 @@ function init() {
   scores = [0, 0];
   roundScore = 0;
   activePlayer = 0;
+  gamePlaying = false
 
   document.querySelector(".dice").style.display = "none";
 
