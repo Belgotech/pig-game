@@ -1,0 +1,1 @@
+Use script.js for your normal pig game OR use the Extras.js for extra rules and functionality
