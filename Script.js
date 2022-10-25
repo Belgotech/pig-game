@@ -39,7 +39,8 @@ function nextPlayer() {
 }
 
 document.querySelector(".btn-hold").addEventListener("click", function () {
-  //add CURRENT scores to GLOBAL score
+  if(gamePlaying){
+    //add CURRENT scores to GLOBAL score
   scores[activePlayer] += roundScore;
   //update the UI
   document.querySelector("#score-" + activePlayer).textContent =
@@ -57,10 +58,13 @@ document.querySelector(".btn-hold").addEventListener("click", function () {
     document
       .querySelector(".player-" + activePlayer + "-panel")
       .classList.remove("active");
+    gamePlaying = false
   } else {
     //nextPlayer
     nextPlayer();
   }
+  }
+  
 });
 
 document.querySelector(".btn-new").addEventListener("click", init);
@@ -68,7 +72,7 @@ function init() {
   scores = [0, 0];
   roundScore = 0;
   activePlayer = 0;
-  gamePlaying = false
+  gamePlaying = true
 
   document.querySelector(".dice").style.display = "none";
 
